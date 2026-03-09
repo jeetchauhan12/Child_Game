@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-primary: #FF6B6B;
+  --color-brand-secondary: #4ECDC4;
+  --color-brand-accent: #FFE66D;
+  --color-brand-dark: #2F2E41;
+}
+
+body {
+  @apply bg-slate-50 text-brand-dark font-sans overflow-x-hidden;
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl rounded-3xl;
+}
+
+.btn-primary {
+  @apply bg-brand-primary text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:scale-105 transition-transform active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-brand-secondary text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:scale-105 transition-transform active:scale-95;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
